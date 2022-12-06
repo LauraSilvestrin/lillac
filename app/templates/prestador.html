@@ -1,0 +1,25 @@
+{% extends "indexHome.html" %}
+
+{% block content %}
+
+<main>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styleServicos.css')}}">
+
+    <section class="lista">
+        
+        {% for servico in lista %}
+
+        <div class="bloco_servico">
+            <p id="titulo">{{servico["titulo"]}}</p>
+            <p>{{servico["descricao"]}}</p>
+            <p>{{servico["email"]}}</p>
+            <p>{{servico["numero"]}}</p>
+        </div>
+        
+
+        {% endfor %}
+        
+    </section>
+</main>
+
+{% endblock %}

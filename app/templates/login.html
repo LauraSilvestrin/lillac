@@ -1,0 +1,30 @@
+{% extends 'indexForms.html' %}
+
+{% block content %}
+
+<main>
+
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styleForms.css')}}">
+
+  <form action="/usuarios/read" method="post">
+    <div class="form-group">
+      <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+    </div>
+  
+    <div class="form-group">
+      <input type="password" class="form-control" id="Senha" placeholder="Senha" name="senha">
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Login</button><br>
+    </div>
+
+  </form>
+
+  <a href="/cadastro">Ainda não possui uma conta?</a><br>
+  <a href="/recuperarSenha">Esqueceu sua senha?</a>
+
+
+</main>
+
+{% endblock %}

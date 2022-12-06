@@ -1,0 +1,41 @@
+{% extends 'indexHome.html' %} {% block content %}
+<main>
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styleHome.css')}}" />
+  <link rel="stylesheet" href="{{url_for('static', filename='css/styleServicos.css')}}" />
+  
+  <form class="searh-box" method="GET" action="/search">
+    <input type="text" placeholder="Pesquisar" class="form-control" name="search" id="search" />
+    <button type="submit" class="btn btn-primary">
+      <i class="bx bx-search icon"></i>
+    </button>
+  </form>
+
+  <section class="lista">
+    {% for servico in lista %}
+
+    <div class="bloco_servico">
+      <p id="titulo">{{servico[1]}}</p>
+      <p>{{servico[4]}}</p>
+    </div>
+
+    {% endfor %}
+  </section>
+
+  {% if tipo == "1" %}
+  <div class="floatButtons">
+    <div class="opcoes">
+      <a href="/cadastrarPrestador"><i class="bx bx-user-plus"></i></a>
+
+      <a href="/cadastrarFerramenta"><i class="bx bx-wrench"></i></a>
+
+      <a href="/cadastrarEmpresa"><i class="bx bx-buildings"></i></a>
+
+      <a href="/logout"><i class="bx bx-door-open"></i></a>
+    </div>
+    <button class="mais" onclick="actionToggle();">+</button>
+  </div>
+  <script src="{{url_for('static', filename='js/home.js')}}"></script>
+
+  {% endif %}
+</main>
+{% endblock %}

@@ -1,0 +1,48 @@
+:root{
+    --roxo-claro:#B39FE5;
+    --roxo: #8D6FD8;
+    --rosa-teste:#f79696;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar {
+    font-family: 'Lato', sans-serif;
+    height: 6.5%;
+    margin: 0;
+    overflow: hidden;
+
+    
+}   
+
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.logo{
+    font-size: 1.6em;
+}
+
+footer > p {
+    margin: 1.2% 0 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 765px)
+{
+  .logo{
+    margin-left: 35px;
+  }
+}

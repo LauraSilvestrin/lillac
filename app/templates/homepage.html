@@ -1,0 +1,31 @@
+{% extends 'indexHome.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/styleHome.css')}}">
+
+<main>
+  <div class="txt">
+    <p>
+      <strong>Olá!</strong><br />
+      O Lillac é um site de busca e cadastro de serviços com objetivo de
+      <strong>auxiliar pessoas</strong> com <strong>deficiência</strong> na
+      procura de serviço especializado em sua região.
+    </p>
+  </div>
+  {% if tipo == "1" %}
+      <div class="floatButtons">
+        <div class="opcoes">
+          <a href="/cadastrarPrestador"><i class='bx bx-user-plus'></i></a>
+
+          <a href="/cadastrarFerramenta"><i class='bx bx-wrench'></i></a>
+
+          <a href="/cadastrarEmpresa"><i class='bx bx-buildings'></i></a>
+
+          <a href="/logout"><i class='bx bx-door-open'></i></a>
+        </div>
+        <button class="mais" onclick="actionToggle();">+</button>
+      </div>
+  <script src="{{url_for('static', filename='js/home.js')}}"> </script>
+  {% endif %}
+</main>
+{% endblock %}
