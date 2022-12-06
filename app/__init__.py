@@ -13,7 +13,7 @@ app = Flask(__name__)
 # <Nome do SGBD>://<Usuário>:<Senha>@<Endereço>/<Nome do banco>
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:abrl0404@127.0.0.1/projeto"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://b5a61052eef78e:a936c0dd@us-cdbr-east-06.cleardb.net/heroku_416c78d4e3ba909"
 app.secret_key = "q4t7w!z%C*F-JaNd"
 
 db = SQLAlchemy(app)
